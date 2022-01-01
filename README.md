@@ -1,6 +1,6 @@
 # Get last comments of tweet
 
-A script that automates filling in and submission of Google Forms using the Puppeteer library. The same script can be reused across multiple google forms with different URLs/form as long as they have the same questions.
+This code allows you to get the id of the latest comments from a tweet.
 
 ## Installation
 Install pip packages
@@ -9,7 +9,7 @@ Install pip packages
 ```bash
 pip install generate-username
 ```
-3. Install requests
+2. Install requests
 ```bash
 pip install requests
 ```
@@ -17,6 +17,8 @@ pip install requests
 
 ## Usage
 
-```bash
-python main.py
-```
+1. Enter bearer token
+2. Enteer tweet id
+3. ```bash
+   python main.py
+    ```
