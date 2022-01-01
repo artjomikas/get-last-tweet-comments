@@ -1,14 +1,10 @@
 import requests
 from random_username.generate import generate_username
 
-def query ():
-    return {}
-
 def create_url(id):
     tweet_fields = "&max_results=100&tweet.fields=in_reply_to_user_id,author_id,created_at,conversation_id"
     url = f"https://api.twitter.com/2/tweets/search/recent?query=conversation_id:{id}{tweet_fields}"
     return url
-
 
 def create_headers(bearer_token):
     headers = {"Authorization": "Bearer {}".format(bearer_token)}
