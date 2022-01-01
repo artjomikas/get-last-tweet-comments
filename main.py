@@ -40,8 +40,9 @@ def create_txt_file(json_response):
         f.write("https://twitter.com/" + list_of_usernames[item] + "/status/" + "%s\n" % list_of_ids[item])
 
 def main():
-    tweet_id = "1471495516047360005"
-    bearer_token = auth()
+    bearer_token = "ENTER YOUR BEARER TOKEN"
+    tweet_id = "ENTER TWEET ID"
+    bearer_token = auth(bearer_token)
     url = create_url(tweet_id)
     headers = create_headers(bearer_token)
     json_response = connect_to_endpoint(url, headers)
