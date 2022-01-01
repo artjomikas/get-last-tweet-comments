@@ -4,10 +4,6 @@ from random_username.generate import generate_username
 def query ():
     return {}
 
-def auth():
-    return ""
-
-
 def create_url(id):
     tweet_fields = "&max_results=100&tweet.fields=in_reply_to_user_id,author_id,created_at,conversation_id"
     url = f"https://api.twitter.com/2/tweets/search/recent?query=conversation_id:{id}{tweet_fields}"
@@ -42,7 +38,6 @@ def create_txt_file(json_response):
 def main():
     bearer_token = "ENTER YOUR BEARER TOKEN"
     tweet_id = "ENTER TWEET ID"
-    bearer_token = auth(bearer_token)
     url = create_url(tweet_id)
     headers = create_headers(bearer_token)
     json_response = connect_to_endpoint(url, headers)
